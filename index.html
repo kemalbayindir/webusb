@@ -1,0 +1,27 @@
+<html>
+    <head>
+    </head>
+    <body>
+    <iframe allowpaymentrequest allow='usb' fullscreen>
+        <h1>Deneme</h1>
+        <script>
+            navigator.usb.requestDevice({ filters: [] })
+            .then(device => {
+                console.log(device.productName);      // "Arduino Micro"
+                console.log(device.manufacturerName); // "Arduino LLC"
+            })
+            .catch(error => { console.log(error); });
+/*
+            navigator.usb.getDevices().then(devices => {
+                devices.map(device => {
+                    alert(device.productName + ' - ' + device.manufacturerName);      // "Arduino Micro"
+                });
+            }).catch(error => { alert(error); });
+*/
+            
+        </script>
+    </iframe>
+
+        
+    </body>
+</html>
