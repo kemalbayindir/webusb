@@ -2,13 +2,12 @@
     <head>
     </head>
     <body>
-    <iframe allowpaymentrequest allow='usb' fullscreen>
         <h1>Deneme</h1>
         <script>
             navigator.usb.requestDevice({ filters: [] })
             .then(device => {
-                console.log(device.productName);      // "Arduino Micro"
-                console.log(device.manufacturerName); // "Arduino LLC"
+                console.log(device.productName);
+                console.log(device.manufacturerName);
             })
             .catch(error => { console.log(error); });
 /*
@@ -20,8 +19,5 @@
 */
             
         </script>
-    </iframe>
-
-        
     </body>
 </html>
